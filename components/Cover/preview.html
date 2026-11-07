@@ -1,0 +1,49 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Geist:wght@400&display=swap">
+<style>
+:root{
+  --color-paper:oklch(96% 0.018 80);
+  --color-paper-3:oklch(89% 0.022 75);
+  --color-muted:oklch(52% 0.012 65);
+  --color-neutral:oklch(38% 0.014 60);
+  --color-ink:oklch(18% 0.014 60);
+  --color-accent:#FC4C02;
+  --font-display:"Fraunces","Tiempos",ui-serif,Georgia,serif;
+  --font-body:"Geist","Söhne",ui-sans-serif,sans-serif;
+  --rule-fine:1px;
+}
+html,body{margin:0;background:var(--color-paper);}
+svg{display:block;width:960px;height:288px}
+.ground{fill:var(--color-paper)}
+.ink{fill:var(--color-ink)}
+.accent{fill:var(--color-accent)}
+.tint{fill:var(--color-paper-3)}
+.mid{fill:var(--color-neutral)}
+.cut{stroke:var(--color-paper);stroke-width:var(--rule-fine);fill:none}
+.name{font-family:var(--font-display);font-weight:340;font-size:84px;fill:var(--color-ink);letter-spacing:-0.025em}
+.tag{font-family:var(--font-body);font-size:13px;fill:var(--color-muted)}
+</style></head>
+<body>
+<svg viewBox="0 0 960 288" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anti-Slop">
+<!--
+blocks: ink 288x176, accent 176x112 (bleeds top-right), paper-3 176x160, neutral 144x96, tint-on-neutral gap; every side a multiple of space-md (16px).
+arrangement: a staggered strip of unequal slabs anchored to the right edge, accent kept to one corner like the 3% rule.
+pattern: four hairline rules at rule-fine crossing the blocks in the ground color; editorial, serif-led, borders over shadows.
+steps and radii: space-md multiples, radius-card 0 (square, as Specimen).
+-->
+<rect class="ground" width="960" height="288"/>
+<rect class="ink" x="480" y="0" width="288" height="176"/>
+<rect class="accent" x="784" y="0" width="176" height="112"/>
+<rect class="tint" x="784" y="128" width="176" height="160"/>
+<rect class="mid" x="480" y="192" width="144" height="96"/>
+<rect class="tint" x="640" y="192" width="128" height="96"/>
+<line class="cut" x1="480" x2="960" y1="48.5" y2="48.5"/>
+<line class="cut" x1="480" x2="960" y1="96.5" y2="96.5"/>
+<line class="cut" x1="480" x2="960" y1="144.5" y2="144.5"/>
+<line class="cut" x1="480" x2="960" y1="240.5" y2="240.5"/>
+<text class="name" x="32" y="212">Anti-Slop</text>
+<text class="tag" x="32" y="244">Design that looks made, not generated.</text>
+</svg>
+</body></html>
